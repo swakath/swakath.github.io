@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IIT Delhi PG FAQs
-date: 2024-06-06 10:00:00
+date: 2024-06-06 15:00:00
 description: My answers to FAQs for incoming IIT Delhi PG students. Learn more about the academic curriculum, accommodation, food, and expenses for a PG student at IIT Delhi.
 tags: iitd
 categories: guide
