@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle:
 
 profile:
   align: right
@@ -18,8 +18,13 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Curious in exploring things around and within. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am currently a postgraduate student in Computer Science and Engineering at [IIT Delhi](https://www.cse.iitd.ac.in/). 
+I work with the [SRISHTI](https://www.cse.iitd.ac.in/~srsarangi/research.html) research group on intelligent systems for PCB CAD under [Prof. Smruti R. Sarangi](https://www.cse.iitd.ac.in/~srsarangi/index.html). 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Previously, I worked as a Research Engineer at [LG Soft India](https://www.lgsoftindia.com/aboutus.php) and earned my B.Tech in Electrical Engineering from [IIT Dharwad](https://ee.iitdh.ac.in/).
+
+Beyond work, I enjoy exploring [Carnatic music](https://youtube.com/playlist?list=PLLoTEz-5MNSm9dDwL-a_m9PsO8N3fKeRI&feature=shared), Tamil classics, and crime fiction. 
+
+This website is a space to share my thoughts on technology, life, and the places, people, and food I encounter.
