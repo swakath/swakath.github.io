@@ -6,7 +6,6 @@ description: My answers to FAQs for incoming IIT Delhi PG students. Learn more a
 tags: iitd
 categories: guide
 thumbnail: assets/img/iitd_main_building.jpg
-sem_fee : assets/posts/iit_faq/sem1_fee_2024_25.pdf
 ---
 ## Welcome to IIT Delhi!
 Hello! I'm [S U Swakath](https://swakath.github.io/). I've compiled this document to address common queries I've received from postgraduate students who will be joining IIT Delhi for the academic year 2024-25.
@@ -95,7 +94,7 @@ Master's students admitted through the Teaching Assistantship program will recei
 
 To continue receiving the assistantship, a student must maintain a minimum SGPA of 7.0 each semester. A satisfactory or unsatisfactory grade is awarded for TA work each semester, which will be reflected in the academic transcript. The CSE department also provides [TA Awards](https://www.cse.iitd.ac.in/index.php/2011-12-29-23-16-01/teaching-assistant-awards) at the end of each semester to TAs who have performed exceptionally well in their assigned courses.
 
-### Tution Fees_1
+### Tution Fees
 The Academic Section at IIT Delhi has shared the Fee Circular for the 1st Semester of 2024-25 via an internal email. I am attaching the circular [here](/assets/posts/iit_faq/sem1_fee_2024_25.pdf
 ), for your reference. This contains detailed information regarding tuition fees. 
 
