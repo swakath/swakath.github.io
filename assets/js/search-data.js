@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-iit-delhi-pg-faqs",
+        },{id: "post-innovation-at-a-premium",
+      
+        title: "Innovation at a Premium",
+      
+      description: "My views on LLM user platforms.",
+      section: "Posts",
+      handler: () => {
+        
+          window.location.href = "/blog/2024/Innovation_at_a_Premium/";
+        
+      },
+    },{id: "post-iit-delhi-pg-faqs",
       
         title: "IIT Delhi PG FAQs",
       
