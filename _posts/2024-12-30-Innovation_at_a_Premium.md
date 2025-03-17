@@ -4,7 +4,7 @@ title: Innovation at a Premium
 date: 2024-12-30 15:00:00
 description: My views on LLM user platforms. 
 categories: tech
-thumbnail: assets/img/iitd_main_building.jpg
+thumbnail: assets/posts/iit_faq/cover.webp
 ---
 The invention of [transformer](https://www.datacamp.com/tutorial/how-transformers-work) architecture, followed by the development of advanced AI models like [OpenAI](https://en.wikipedia.org/wiki/OpenAI)’s [ChatGPT](https://chatgpt.com/), has significantly disrupted the technology landscape. 
 Recently, [RAG-based solutions](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/) integrated with AI chatbots have introduced a revolutionary and efficient way of searching for information online. One such solution, 
