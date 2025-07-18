@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 
 Curious in exploring things around and within. 
 
-I am currently an Engineer at [Qualcomm](https://www.qualcomm.com/), working on the [OpenWRT](https://openwrt.org/) project as part of the team in [Chennai](https://en.wikipedia.org/wiki/Chennai).
+I am currently an Engineer at [Qualcomm](https://www.qualcomm.com/) [Chennai](https://en.wikipedia.org/wiki/Chennai).
 
 I completed my M.Tech in Computer Science and Engineering at [IIT Delhi](https://www.cse.iitd.ac.in/), where I was part of the [SRISHTI](https://www.cse.iitd.ac.in/~srsarangi/research.html) research group. My research there focused on developing intelligent systems for PCB Design Automation. Prior to that, I earned my B.Tech in Electrical Engineering from  [IIT Dharwad](https://ee.iitdh.ac.in/).
 
