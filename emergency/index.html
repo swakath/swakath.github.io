@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Emergency information for a motorcycle rider.">
+  <title>Rider Emergency Information</title>
+
+  <style>
+    :root {
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --text: #111111;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --danger: #d71920;
+      --danger-dark: #b51218;
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: min(100% - 28px, 720px);
+      margin: 0 auto;
+      padding: 20px 0 40px;
+    }
+
+    .hero {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 24px 18px 20px;
+      text-align: center;
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      color: var(--danger);
+      margin-bottom: 12px;
+    }
+
+    .emergency-icon {
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(25px, 6vw, 34px);
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      margin: 8px auto 0;
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .action {
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 750;
+      font-size: 16px;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.12s ease, filter 0.12s ease;
+    }
+
+    .action:active {
+      transform: scale(0.98);
+    }
+
+    .action-112 {
+      background: var(--danger);
+      color: white;
+    }
+
+    .action-112:hover {
+      background: var(--danger-dark);
+    }
+
+    .action-family {
+      background: #171717;
+      color: white;
+    }
+
+    .action-location {
+      background: white;
+      color: #171717;
+      border: 1px solid var(--border);
+    }
+
+    .notice {
+      margin-top: 14px;
+      padding: 13px 15px;
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: left;
+    }
+    .identity {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #111111;
+      color: white;
+      font-weight: 800;
+      font-size: 17px;
+    }
+
+    .identity-name {
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .identity-meta {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 1px;
+    }
+
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 21px;
+      margin-top: 14px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 17px;
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .section-title .icon {
+      font-size: 21px;
+    }
+
+    .critical {
+      border-left: 5px solid var(--danger);
+    }
+
+    .critical .section-title {
+      color: var(--danger);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      gap: 10px 14px;
+      font-size: 15px;
+    }
+
+    .label {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .value {
+      font-weight: 650;
+      overflow-wrap: anywhere;
+    }
+
+    .empty {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .secondary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      margin-top: 18px;
+      padding: 10px 16px;
+      border-radius: 11px;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-family: inherit;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .footer {
+      text-align: center;
+      color: #888;
+      font-size: 12px;
+      padding: 22px 10px 0;
+    }
+
+    @media (min-width: 560px) {
+      .page {
+        padding-top: 34px;
+      }
+
+      .actions {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .action-location {
+        grid-column: 1 / -1;
+      }
+
+      .hero {
+        padding: 32px;
+      }
+
+      .section {
+        padding: 25px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .page {
+        width: min(100% - 18px, 720px);
+        padding-top: 10px;
+      }
+
+      .hero,
+      .section {
+        border-radius: 15px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .label {
+        margin-top: 8px;
+      }
+
+      .value {
+        margin-bottom: 3px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <!-- Emergency header -->
+    <section class="hero">
+      <div class="eyebrow">EMERGENCY INFORMATION</div>
+      <div class="emergency-icon">🚨</div>
+      <h1>Rider needs help</h1>
+      <p class="subtitle">
+        If the rider is injured or unable to respond, use the actions below.
+      </p>
+
+      <div class="actions">
+        <!-- Replace 112 if your deployment needs a different emergency number -->
+        <a class="action action-112" href="tel:112">
+          📞 CALL 112
+        </a>
+
+        <!-- Replace this URL with your call-routing / relay service -->
+        <a class="action action-family"
+           href="tel:+919876543210">
+          📞 CALL FAMILY
+        </a>
+
+        <button class="action action-location" onclick="shareLocation()">
+          📍 SHARE LOCATION WITH FAMILY
+        </button>
+      </div>
+
+      <div class="notice">
+        <strong>In a life-threatening emergency, call 112 first.</strong>
+        The information below is provided to help responders and family.
+      </div>
+    </section>
+
+    <section class="identity">
+      <div class="avatar">S</div>
+      <div>
+        <div class="identity-name">S. U. Swakath</div>
+        <div class="identity-meta">Motorcycle rider · Emergency profile</div>
+      </div>
+    </section>
+
+    <!-- Rider -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="icon">👤</span>
+        Rider
+      </h2>
+
+      <div class="info-grid">
+        <div class="label">Name</div>
+        <div class="value">S. U. Swakath</div>
+
+        <div class="label">Blood Group</div>
+        <div class="value">O+</div>
+      </div>
+    </section>
+
+    <!-- Critical medical information -->
+    <section class="section critical">
+      <h2 class="section-title">
+        <span class="icon">⚠️</span>
+        Critical Medical Information
+      </h2>
+
+      <div class="info-grid">
+        <div class="label">Allergies</div>
+        <div class="value">No known allergies</div>
+
+        <div class="label">Medical Conditions</div>
+        <div class="value">None specified</div>
+
+        <div class="label">Medication</div>
+        <div class="value">None specified</div>
+      </div>
+    </section>
+
+    <!-- Insurance -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="icon">🏥</span>
+        Medical Insurance
+      </h2>
+
+      <div class="info-grid">
+        <div class="label">Name</div>
+        <div class="value">S. U. Swakath</div>
+
+        <div class="label">Policy Number</div>
+        <div class="value">XXXXXXXXXXXX</div>
+
+        <div class="label">Member ID</div>
+        <div class="value">XXXXXXXX</div>
+
+        <div class="label">Date of Birth</div>
+        <div class="value">DD/MM/YYYY</div>
+
+        <div class="label">Valid Until</div>
+        <div class="value">DD/MM/YYYY</div>
+      </div>
+
+      <!-- Replace with a protected document URL if desired -->
+      <button class="secondary-button" type="button" onclick="viewInsuranceCard()">
+        📄 VIEW INSURANCE CARD
+      </button>
+    </section>
+
+    <!-- Vehicle -->
+    <section class="section">
+      <h2 class="section-title">
+        <span class="icon">🏍️</span>
+        Vehicle
+      </h2>
+
+      <div class="info-grid">
+        <div class="label">Registration</div>
+        <div class="value">TN XX XX XXXX</div>
+
+        <div class="label">Vehicle</div>
+        <div class="value">Motorcycle</div>
+      </div>
+    </section>
+
+    <footer class="footer">Emergency information • Keep your details up to date</footer>
+
+  </main>
+
+  <script>
+    function viewInsuranceCard() {
+      alert("Replace this button with your protected insurance-card URL.");
+    }
+
+    function shareLocation() {
+      if (!navigator.geolocation) {
+        alert("Location sharing is not supported on this device.");
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+
+          const mapsUrl =
+            "https://www.google.com/maps?q=" + lat + "," + lon;
+
+          // For now, open the location.
+          // Later this can be replaced with your backend/relay
+          // that sends the location to the emergency contact.
+          window.open(mapsUrl, "_blank");
+        },
+        function() {
+          alert("Unable to access your location. Please check location permissions.");
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 0
+        }
+      );
+    }
+  </script>
+</body>
+</html>
